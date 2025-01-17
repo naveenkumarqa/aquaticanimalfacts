@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatic Animal Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #006064;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #006064;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aquatic Animal Facts</h1>
+        <button id="factButton">Show a Fun Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "Did you know that octopuses have three hearts? Two of the hearts pump blood to the gills, while the third heart pumps it to the rest of the body.",
+            "Dolphins have been known to use tools, such as marine sponges, to protect their snouts while foraging on the ocean floor.",
+            "Some species of jellyfish are immortal. They can revert back to their juvenile form after maturing, essentially starting their life cycle over.",
+            "The blue whale is the largest animal on the planet, reaching lengths of up to 100 feet and weighing as much as 200 tons.",
+            "Sea turtles can hold their breath for several hours while resting on the ocean floor."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
